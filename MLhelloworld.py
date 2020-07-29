@@ -11,6 +11,8 @@ y = [2,3,6,8,100,120]
 
 # define model
 model = keras.Sequential()
+#model.add(keras.layers.Dense(1, input_shape=(1,), activation='linear')) #SPECIFY THE ACTIVATION
+#model.add(keras.layers.Dense(1, input_shape=(1,), activation='relu'))   #SPECIFY THE ACTIVATION
 model.add(keras.layers.Dense(1, input_shape=(1,)))
 model.compile(keras.optimizers.Adam(lr=1), 'mean_squared_error')
 
